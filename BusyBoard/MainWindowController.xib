@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="BusyBoard" customModuleProvider="target">
+            <connections>
+                <outlet property="checkbox" destination="fts-qd-IUu" id="rH9-a4-9l7"/>
+                <outlet property="revealButton" destination="KcY-A4-QOg" id="2rX-Lw-wlh"/>
+                <outlet property="secretText" destination="bIa-1a-hxJ" id="Z8N-eA-qeq"/>
+                <outlet property="secretTextReveal" destination="8JX-k4-gRd" id="9y5-8N-giQ"/>
+                <outlet property="slider" destination="k5b-t4-gNE" id="zbB-7Z-DIJ"/>
+                <outlet property="sliderGoesUp" destination="oGa-qc-hC2" id="sJk-9A-lEs"/>
+                <outlet property="window" destination="cFY-g9-vrE" id="Tx9-vP-XQp"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="BusyBoard" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cFY-g9-vrE">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="207" width="731" height="481"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="dkW-sJ-gQw">
+                <rect key="frame" x="0.0" y="0.0" width="731" height="481"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="zjq-6b-5sm">
+                        <rect key="frame" x="61" y="178" width="158" height="45"/>
+                        <buttonCell key="cell" type="radio" title="Show slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="qUu-Rd-T4s">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showTicks:" target="-2" id="iht-eZ-mvs"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzr-HZ-AtO">
+                        <rect key="frame" x="61" y="129" width="158" height="45"/>
+                        <buttonCell key="cell" type="radio" title="Hide slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2p2-hC-qOe">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showTicks:" target="-2" id="71s-Y3-b5J"/>
+                        </connections>
+                    </button>
+                    <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xj6-zS-RfH">
+                        <rect key="frame" x="363" y="49" width="5" height="383"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fts-qd-IUu">
+                        <rect key="frame" x="503" y="416" width="116" height="18"/>
+                        <buttonCell key="cell" type="check" title="Check Me" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Yus-ro-IX8">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkBoxticked:" target="-2" id="Sni-hP-Mjc"/>
+                        </connections>
+                    </button>
+                    <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-UG-PV6">
+                        <rect key="frame" x="395" y="400" width="298" height="5"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIa-1a-hxJ">
+                        <rect key="frame" x="395" y="274" width="298" height="112"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="KV5-ZU-ajl">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcY-A4-QOg">
+                        <rect key="frame" x="458" y="196" width="172" height="32"/>
+                        <buttonCell key="cell" type="push" title="Reveal the secret text" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eJ9-D0-VTw">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="revealText:" target="-2" id="L3Y-1v-qPx"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JX-k4-gRd">
+                        <rect key="frame" x="395" y="49" width="298" height="103"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="PNe-qu-kzX">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGa-qc-hC2">
+                        <rect key="frame" x="90" y="313" width="118" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="iIj-d2-1nn">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-t4-gNE">
+                        <rect key="frame" x="18" y="127" width="21" height="307"/>
+                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="BDx-cy-17v"/>
+                        <connections>
+                            <action selector="sliderGoesUpOrDown:" target="-2" id="gIG-x5-nps"/>
+                        </connections>
+                    </slider>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="446.5" y="496.5"/>
+        </window>
+    </objects>
+</document>
