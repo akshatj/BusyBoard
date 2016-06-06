@@ -48,7 +48,7 @@
                         </connections>
                     </button>
                     <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xj6-zS-RfH">
-                        <rect key="frame" x="363" y="49" width="5" height="383"/>
+                        <rect key="frame" x="363" y="49" width="4" height="383"/>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
